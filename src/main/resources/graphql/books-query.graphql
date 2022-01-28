@@ -1,0 +1,13 @@
+query Books {
+    book: books {
+        ...bookFields
+    }
+}
+
+fragment bookFields on Book {
+    title
+    author
+    isbn
+    pages
+    type
+}

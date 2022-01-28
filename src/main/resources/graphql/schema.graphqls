@@ -3,7 +3,8 @@ schema {
 }
 
 type Query {
-    book(isbn:String!):Book
+    book(isbn:String!):Book!
+    books:[Book]!
 }
 
 type Book {
@@ -11,4 +12,10 @@ type Book {
     title:String!
     isbn:String!
     pages:Int!
+    type:BookType
+}
+
+enum BookType {
+    FICTION
+    NON_FICTION
 }

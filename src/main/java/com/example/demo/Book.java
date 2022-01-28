@@ -8,4 +8,5 @@ public class Book {
     String title;
     String isbn;
     int pages;
+    BookType type;
 }

@@ -1,12 +1,15 @@
-query {
-    book1:book(isbn: "1") {
-        title
-        author
-        pages
+query Books($isbn1:String!, $isbn2:String!){
+    book1: book(isbn: $isbn1) {
+        ...bookFields
     }
-    book2:book(isbn: "4") {
-        title
-        author
-        pages
+    book2: book(isbn: $isbn2) {
+        ...bookFields
     }
+}
+
+fragment bookFields on Book {
+    title
+    author
+    pages
+    type
 }
