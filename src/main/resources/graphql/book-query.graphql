@@ -1,7 +1,12 @@
 query {
-    book(isbn: "2") {
+    book1:book(isbn: "1") {
         title
         author
-        isbn
+        pages
+    }
+    book2:book(isbn: "4") {
+        title
+        author
+        pages
     }
 }

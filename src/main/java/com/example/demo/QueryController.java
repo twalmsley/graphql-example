@@ -10,12 +10,12 @@ public class QueryController {
     @QueryMapping
     public Book book(@Argument final String isbn) {
         return switch (isbn) {
-            case "1" -> new Book("Clive Cussler", "Sahara", isbn);
-            case "2" -> new Book("Ian Fleming", "Dr No", isbn);
-            case "3" -> new Book("Herman Melville", "Moby Dick", isbn);
-            case "4" -> new Book("Jules Verne", "Twenty Thousand Leagues Under the Seas", isbn);
-            case "5" -> new Book("Clive Cussler", "Raise the Titanic!", isbn);
-            default -> new Book("Nemo", "Nothing", isbn);
+            case "1" -> new Book("Clive Cussler", "Sahara", isbn, 100);
+            case "2" -> new Book("Ian Fleming", "Dr No", isbn, 200);
+            case "3" -> new Book("Herman Melville", "Moby Dick", isbn, 300);
+            case "4" -> new Book("Jules Verne", "Twenty Thousand Leagues Under the Seas", isbn, 400);
+            case "5" -> new Book("Clive Cussler", "Raise the Titanic!", isbn, 500);
+            default -> new Book("Nemo", "Nothing", isbn, 0);
         };
     }
 }
