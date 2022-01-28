@@ -1,0 +1,7 @@
+query {
+    book(isbn: "2") {
+        title
+        author
+        isbn
+    }
+}
